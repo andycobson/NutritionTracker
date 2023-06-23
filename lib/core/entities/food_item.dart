@@ -5,6 +5,8 @@ class FoodItem extends Equatable {
   final String id;
   final String foodName;
 
+  final double calories;
+
   // Macros
   final double protein;
   final double fat;
@@ -22,11 +24,11 @@ class FoodItem extends Equatable {
   const FoodItem(
       {required this.id,
       required this.foodName,
+      required this.calories,
       required this.protein,
       required this.fat,
       required this.carbs});
 
   @override
-  // TODO: implement props
-  List<Object?> get props => throw UnimplementedError();
+  List<Object?> get props => [id, foodName, calories, protein, fat, carbs];
 }
